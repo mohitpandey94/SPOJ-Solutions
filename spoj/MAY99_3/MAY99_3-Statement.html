@@ -1,0 +1,60 @@
+<p> One day Manku was very thirsty so he decided to drink exactly z litres of water. However , in front of him, there is a well of infinite amount of water and 2 empty jugs of quantity x litres and y litres respectively.</p> 
+<p> Now Manku can do the following operations to any jug </p>
+<ol> 
+ <li>Fill it completely from the well</li> 
+ <li>Empty it entirely</li> 
+ <li>Transfer as much water from Jug 1 to Jug 2, till Jug 1 gets empty or Jug 2 is completely filled.</li> 
+</ol> 
+<p>Now since he has no measuring device so he will do these operations only to make any of the 2 jug having exactly z litres of water.</p> 
+<p>Now Your task is given value of x, y, z, tell whether it is possible for Manku to drink water or not.</p> 
+<h3>Input</h3> 
+<p>First Line of Input contains T, the number of test cases. (T &lt;= 25)</p> 
+<p>Then for each test case there are 3 numbers x, y, z given in separate line.</p> 
+<ul> 
+ <li>1 &lt;= x &lt;= 10^8</li> 
+ <li>1 &lt;= y &lt;= 10^8</li> 
+ <li>1 &lt;= z &lt;= 10^8</li> 
+</ul> 
+<h3>Output</h3> 
+<p>For each test case output "<tt>YES</tt>" if manku can drink exactly z litres of water else "<tt>NO</tt>".</p> 
+<h3>Example</h3> 
+<pre><strong>Input:</strong>
+5
+2 4 3
+2 5 1
+9 3 6
+3 8 7
+6 1 10
+
+<strong>Output:</strong>
+NO
+YES
+YES
+YES
+NO</pre> 
+<h3>Explanation</h3> 
+<ul> 
+ <li>In Test case 1 Either Manku can have 2 or 4 litres of water so he cant drink 3 litres.</li> 
+ <li>In Test case 2 Manku can have 1 litre water by doing the following operations: 
+  <ul> 
+   <li>-&gt; Fill 2 litre Jug</li> 
+   <li>-&gt; Transfer its water to 5 litre Jug</li> 
+   <li>-&gt; Again Fill 2 litre Jug</li> 
+   <li>-&gt; Again Transfer its entire water to 5 litre Jug</li> 
+   <li>Now 5 litre Jug will have total 4 litre water </li> 
+   <li>-&gt; Again Fill 2 litre Jug </li> 
+   <li>-&gt; Now transfer 1 litre water to 5 litre Jug </li> 
+   <li>because at present 5 litre Jug don't have space for more than 1 litre water</li> 
+   <li>Now the 2 litre Jug will have only 1 litre water left</li> 
+  </ul> </li> 
+ <li>For Test case 3 we will transfer 3 litre water twice from 3 litre jug to 9 litre jug</li> 
+ <li>For test Case 4, 
+  <ul> 
+   <li>transfer 3 times water of 3 litre jug to 8 litre jug </li> 
+   <li>Ultimately 3 litre Jug has 1 litre water left and 8 litre Jug is full</li> 
+   <li>Now empty 8 litre jug and pour remaining 1 litre of 3 litre jug in it</li> 
+   <li>Now fill 3 litre jug fully twice and transfer its water to 8 litre jug</li> 
+   <li>Now 8 litre Jug will have 7 litre water</li> 
+  </ul> </li> 
+ <li>For Test case 5, we cant have 10 litre of water in any jug</li> 
+</ul>

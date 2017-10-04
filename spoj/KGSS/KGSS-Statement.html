@@ -1,0 +1,186 @@
+<div align="left">
+  You are given a sequence A[1], A[2], ..., A[N] ( 0 ≤ A[i] ≤ 10^8 , 2 ≤ N ≤ 10^5 ). There are two types of operations and they are defined as follows:
+ <p></p> 
+ <b>Update:</b> 
+ <p> This will be indicated in the input by a 'U' followed by space and then two integers i and x.</p>
+ <p> <b>U i x</b>, 1 ≤ i ≤ N, and x, 0 ≤ x ≤ 10^8.</p>
+ <p> This operation sets the value of A[i] to x.</p> 
+ <b>Query:</b> 
+ <p> This will be indicated in the input by a 'Q' followed by a single space and then two integers i and j.</p>
+ <p> <b>Q x y</b>, 1 ≤ x &lt; y ≤ N. </p>
+ <p> You must find i and j such that x ≤ i, j ≤ y and i != j, such that the sum A[i]+A[j] is maximized. Print the sum A[i]+A[j]. </p> 
+ <h3 align="center">Input</h3> 
+ <p>The first line of input consists of an integer <b>N</b> representing the length of the sequence. Next line consists of N space separated integers A[i]. Next line contains an integer <b>Q</b>, Q ≤ 10^5, representing the number of operations. Next Q lines contain the operations. </p>
+ <h3 align="center">Output</h3> 
+ <p>Output the maximum sum mentioned above, in a separate line, for each Query. </p>
+ <h3 align="center">Example</h3> 
+ <pre>
+<b>Input:</b>
+5
+1 2 3 4 5
+6
+Q 2 4
+Q 2 5
+U 1 6
+Q 1 5
+U 1 7
+Q 1 5
+
+<b>Output:</b>
+7
+9
+11
+12
+
+</pre> 
+ <div align="center"> 
+  <b>Warning: large Input/Output data, be careful with certain languages</b> 
+ </div> 
+</div> 
+<div class="text-center"> 
+ <a href="/submit/KGSS/" class="btn btn-primary btn-lg"><i class="fa fa-send"></i> Submit solution!</a> 
+</div> 
+<!-- google_ad_section_end --> 
+<div id="ccontent"> 
+ <!-- google_ad_section_start --> 
+ <hr style="clear:both;"> 
+ <a href="#" onclick="toggleComments(); return false;"><span id="comments_sh">hide</span> comments</a>
+ <br> 
+ <a id="comments"></a> 
+ <table id="comments_table" width="100%"> 
+  <tbody>
+   <tr> 
+    <td colspan="2"> 
+     <ul class="pagination" style=""> 
+      <li class="disabled"><span>&lt;</span></li> 
+      <li class="disabled"><span>Previous</span></li> 
+      <li class="active"><span>1</span></li> 
+      <li><a href="/problems/KGSS/cstart=10" class="pager_link">2</a></li> 
+      <li><a href="/problems/KGSS/cstart=20" class="pager_link">3</a></li> 
+      <li><a href="/problems/KGSS/cstart=30" class="pager_link">4</a></li> 
+      <li><a href="/problems/KGSS/cstart=40" class="pager_link">5</a></li> 
+      <li><a href="/problems/KGSS/cstart=50" class="pager_link">6</a></li> 
+      <li><a href="/problems/KGSS/cstart=10" class="pager_link">Next</a></li> 
+      <li><a href="/problems/KGSS/cstart=50" class="pager_link">&gt;</a></li> 
+     </ul> </td> 
+   </tr> 
+   <tr> 
+    <td colspan="2"> </td> 
+   </tr> 
+   <script language="JavaScript">
+	<!--
+	$(document).ready(function(){
+        $('.pager_link').bind('click', function(me){
+                var href=$(me.currentTarget).attr('href');
+		$('#ccontent').animate({opacity: 0.5},1);
+                $.ajax({
+                        type: "GET",
+                        url: href+",ajax=1",
+                        contentType: "application/x-www-form-urlencoded;charset=ISO-8859-2",
+                        success: function(data){
+                                $('#ccontent').html(data);
+				$('#ccontent').animate({opacity: 1.0},1);
+                        },
+                        error: function(err){
+                                alert('error');
+                        }
+                });
+                return false;
+        });
+	});
+	-->
+	</script> 
+   <tr> 
+    <td width="50" style="vertical-align:top;"> <img src="http://www.gravatar.com/avatar/8a6aefc6499447e0aa15736afdba7da0?s=40&amp;20150116"> </td> 
+    <td class="comm comm_odd"> <a href="/users/da_201501181">da_201501181</a>: <span style="font-size: 10px; color: #666;">2017-09-14 11:52:22</span> <br> <p>AC in ONE GO..!!! Nice implementation category question</p> </td> 
+   </tr> 
+   <tr> 
+    <td width="50" style="vertical-align:top;"> <img src="http://www.gravatar.com/avatar/a83bb0d89d035d040c290463405bcc23?s=40&amp;20150116"> </td> 
+    <td class="comm comm_even"> <a href="/users/venukant">VENUKANT SAHU</a>: <span style="font-size: 10px; color: #666;">2017-09-12 13:28:16</span> <br> <p>AC in one go :)</p> </td> 
+   </tr> 
+   <tr> 
+    <td width="50" style="vertical-align:top;"> <img src="http://www.gravatar.com/avatar/b2a18cdcd4973936bd8c6e06964dfa0d?s=40&amp;20150116"> </td> 
+    <td class="comm comm_odd"> <a href="/users/scorpion_ajay">scorpion_ajay</a>: <span style="font-size: 10px; color: #666;">2017-09-11 22:22:34</span> <br> <p>@bhagirathi08 no we don't need lazy, it is only needed in update range sort of questions...</p> </td> 
+   </tr> 
+   <tr> 
+    <td width="50" style="vertical-align:top;"> <img src="http://www.gravatar.com/avatar/5f7e96446b4dd29acf34aa01262219b9?s=40&amp;20150116"> </td> 
+    <td class="comm comm_even"> <a href="/users/nikhil2504">nikhil2504</a>: <span style="font-size: 10px; color: #666;">2017-08-02 18:08:13</span> <br> <p></p> <b>Last edit: 2017-08-02 19:09:33</b> </td> 
+   </tr> 
+   <tr> 
+    <td width="50" style="vertical-align:top;"> <img src="http://www.gravatar.com/avatar/432e1934050926c131f418f8696c81db?s=40&amp;20150116"> </td> 
+    <td class="comm comm_odd"> <a href="/users/bhagirathi08">bhagirathi08</a>: <span style="font-size: 10px; color: #666;">2017-07-31 08:59:16</span> <br> <p>Do we need LAZY propagation?</p> </td> 
+   </tr> 
+   <tr> 
+    <td width="50" style="vertical-align:top;"> <img src="http://www.gravatar.com/avatar/6f3b64902d3ae2addebb8b0ed43551cd?s=40&amp;20150116"> </td> 
+    <td class="comm comm_even"> <a href="/users/ajeyo">ajeyo</a>: <span style="font-size: 10px; color: #666;">2017-05-27 18:18:22</span> <br> <p>AC in one GO! :D Probably the very first time :P <br></p> </td> 
+   </tr> 
+   <tr> 
+    <td width="50" style="vertical-align:top;"> <img src="http://www.gravatar.com/avatar/88deeda866672db3ce9cebf67ced342e?s=40&amp;20150116"> </td> 
+    <td class="comm comm_odd"> <a href="/users/lord_poseidon">lord_poseidon</a>: <span style="font-size: 10px; color: #666;">2017-05-27 10:31:39</span> <br> <p>why not working if the size of tree set to be 2 * n + 10(as minimum no of elements needed are 2 * n - 1 for the tree)</p> </td> 
+   </tr> 
+   <tr> 
+    <td width="50" style="vertical-align:top;"> <img src="http://www.gravatar.com/avatar/aa579df95e5a0342ab097b4e1ec0b50b?s=40&amp;20150116"> </td> 
+    <td class="comm comm_even"> <a href="/users/epsilonalpha">epsilonalpha</a>: <span style="font-size: 10px; color: #666;">2017-04-11 01:03:04</span> <br> <p>AC in one go. Recommended!</p> </td> 
+   </tr> 
+   <tr> 
+    <td width="50" style="vertical-align:top;"> <img src="http://www.gravatar.com/avatar/e1206de44d3125480a15de82a1d7486f?s=40&amp;20150116"> </td> 
+    <td class="comm comm_odd"> <a href="/users/alaasebai">alaa seb</a>: <span style="font-size: 10px; color: #666;">2017-03-24 23:46:21</span> <br> <p>my first segment tree .. AC in one go :) <br></p> </td> 
+   </tr> 
+   <tr> 
+    <td width="50" style="vertical-align:top;"> <img src="http://www.gravatar.com/avatar/809f0d23ca79baee9655bb85f80e8fe2?s=40&amp;20150116"> </td> 
+    <td class="comm comm_even"> <a href="/users/rahul20111995">shahzada</a>: <span style="font-size: 10px; color: #666;">2017-03-14 13:56:05</span> <br> <p>RE(SIGSEGV) - Scanf <br>AC - Cin <br>ye bik gyi gormint.</p> </td> 
+   </tr> 
+  </tbody>
+ </table> 
+ <script language="javascript" type="text/javascript">
+<!--
+function getCookieVal (offset) {
+        var endstr = document.cookie.indexOf (";", offset);
+        if (endstr == -1) { 
+                endstr = document.cookie.length; 
+        }
+        return unescape(document.cookie.substring(offset, endstr));
+}
+
+function GetCookie (name) {
+  var arg = name + "=";
+  var alen = arg.length;
+  var clen = document.cookie.length;
+  var i = 0;
+  while (i < clen) {
+    var j = i + alen;
+    if (document.cookie.substring(i, j) == arg) {
+      return getCookieVal (j);
+      }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break; 
+    }
+  return null;
+}
+
+function toggleComments() {
+        var a = document.getElementById('comments_table');
+        var d = a.style.display;
+        if( d == "" || d == "block" ){
+                d = "none";
+                document.getElementById('comments_sh').innerHTML = 'show';
+        } else {
+                d = "block";
+                document.getElementById('comments_sh').innerHTML = 'hide';
+        }
+        a.style.display = d;
+        document.cookie="comments_table="+d+"; path=/;";
+}
+
+if( GetCookie('comments_table') == 'none' ){
+        document.getElementById('comments_sh').innerHTML = 'show';
+        document.getElementById('comments_table').style.display = 'hide';
+}
+
+-->
+</script> 
+ <!-- google_ad_section_end --> 
+</div> 
+<table width="100%"> 
+</table> 
+<br>
